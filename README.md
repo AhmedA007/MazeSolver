@@ -1,34 +1,60 @@
- # Maze Solver
+# Maze Solver
 
-A C++ program that generates a Maze that can be solved by a player using w a s d keys, and after completion, the maze outputs out time.
-After completion, a shortest path or solution is shown using Dijkstra's and BFS algorithm
+Maze Solver is a C++ program that generates random mazes and allows the player to navigate through them using 'w', 'a', 's', 'd' keys. It measures the time taken to solve the maze and maintains a scoreboard of the fastest times. After completion, a shortest path or solution is shown using Dijkstra's and BFS algorithm.
 
 ## Table of Contents
 
 - [Maze Solver](#maze-solver)
   - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Getting Started](#getting-started)
-    - [Installation](#installation)
+  - [Header File: `project.h`](#header-file-projecth)
+  - [Main File: `main.cpp`](#main-file-maincpp)
+  - [Usage](#usage)
+  - [Citations](#citations)
+  - [Authors](#authors)
 
-## Introduction
+## Header File: `project.h`
 
-Maze Solver is a C++ project that generates random mazes of different difficulties and provides the functionality to find and visualize the shortest path from the start to the end of the maze. It utilizes a breadth-first search algorithm to find the shortest path. The project offers an interactive command-line interface for users to navigate through the maze.
+`project.h` contains the core data structures and methods used for generating, solving, and visualizing mazes. It defines the `MazeSolver` class, which includes the following features:
 
-## Features
+- Generation of random mazes with customizable difficulty levels: easy, hard, and expert.
+- A shortest path finder based on breadth-first search (BFS).
+- A method for moving through the maze interactively.
+- Maze solving with visualization of the shortest path using '*' markers.
+- The ability to change maze sizes and generate different mazes.
+- Integration with a time measurement function to record and display the time taken to complete the maze.
+- Integration with a scoreboard for recording the fastest times.
 
-- Generates random mazes of varying difficulties.
-- Finds the shortest path through the generated maze.
-- Interactive maze navigation using 'w' (up), 's' (down), 'a' (left), or 'd' (right) inputs.
-- Visualization of the maze with different colors for walls, the path, start, and end points.
+## Main File: `main.cpp`
 
-## Getting Started
+The `main.cpp` file is responsible for executing the maze solver game. It provides a user interface for starting the game and utilizes the `MazeSolver` class defined in `project.h`. Here's an overview of what this file does:
 
-### Installation
+- It starts the game when the user is ready by generating a random maze.
+- It measures the time taken by the player to complete the maze.
+- It records the player's time in a scoreboard file and compares it with the fastest times.
+- It provides feedback to the player about their performance, such as whether they set a new record or tied with the fastest time.
 
-1. Clone the repository:
+The main file uses a combination of C++ standard libraries and user-defined functions to implement the game logic and interact with the `MazeSolver` class.
 
-   ```bash
-   $ git clone https://github.com/AhmedA007/MazeSolver.git
-   $ cd yourproject
+## Usage
+
+1. Clone the repository
+2. Compile and run the program using a C++ compiler.
+3. When prompted, enter 'R' or 'r' to start the game.
+4. Use 'w', 'a', 's', and 'd' keys to navigate through the maze.
+5. Enter 'D' or 'd' when you have completed the maze.
+6. The program will display your time and compare it to the fastest times recorded in the scoreboard.
+
+## Citations
+
+
+1. Timer using Chrono Library: [cplusplus.com forum](https://cplusplus.com/forum/beginner/280938/)
+2. Dijkstra's and BFS algorithm: Cracking the Coding Interview by Gayle Laakmann McDowell
+3. Color Coded Terminal Output: [Stack Overflow](https://stackoverflow.com/questions/4053837/colorizing-text-in-the-console-with-c)
+
+Feel free to customize the game, such as changing maze sizes or adding more features, to suit your preferences.
+
+Enjoy playing and solving mazes with Maze Solver!
+
+## Authors
+
+* **Ahmed Amir** - *Comp Sci Student* - [Ahmed Amir](https://github.com/AhmedA007/) 
